@@ -1,4 +1,5 @@
 #include <stdint.h>
+#include <stdbool.h>
 #include "msp.h"
 //include "..\inc\Bump.h"
 //include "..\inc\BumpInt.h"
@@ -20,7 +21,18 @@ void TimedPause(uint32_t time){
 uint8_t Data; // QTR-8RC
 int32_t Position; // 332 is right, and -332 is left of center
 
-int main(void){
+void move_5(bool direction) {
+    if (direction==1) {
+        Motor_Right(2000,2000);
+    }
+    else {
+        Motor_Left(2000,2000);
+    }
+    Clock_Delay1ms(167);
+    Motor_Stop();
+}
+
+int main(){
     TExaS_Init(LOGICANALYZER_P2);
     Clock_Init48MHz();
     LaunchPad_Init(); // built-in switches and LEDs
@@ -30,7 +42,7 @@ int main(void){
     Motor_Init();     // your function
     Reflectance_Init();
 
-    int speed = 3000, backup_speed = 4000;
+    int speed = 5000, backup_speed = 4000;
     int time1 = 50,
         time2 = 100,
         time3 = 150,
@@ -44,14 +56,12 @@ int main(void){
         printf("%x \n", Data);
         Position = Reflectance_Position(Data);
         Clock_Delay1ms(10);
+        //Motor_Backward(speed,speed);
+
 
         if (Data == 0b11111111 && Position == 0) { // 2nd t-join
-            Motor_Right(2000,2000);
-            Clock_Delay1ms(1500);
-            Motor_Stop();
-            Motor_Forward(4000,4000);
-            Clock_Delay1ms(500);
-            Motor_Stop();
+                move_5(1);
+
         }
         else if (Position >-47 && Position <47) { //center
             Motor_Forward(speed,speed);
@@ -60,12 +70,12 @@ int main(void){
             LaunchPad_Output(0b111); //white LED
             //break;
         } else if (Position <= -47 && Position > -142) { //slightly off to the left
-            Motor_Left(0,speed);
+            Motor_Left(0.3*speed,speed);
             Clock_Delay1ms(time1);
             Motor_Stop();
             LaunchPad_Output(0b010); //green LED
         } else if (Position >= 47 && Position <142) { //slightly off to the right
-            Motor_Right(speed,0);
+            Motor_Right(speed,0.3*speed);
             Clock_Delay1ms(time1);
             LaunchPad_Output(0b011); //yellow LED
             Motor_Stop();
@@ -79,26 +89,27 @@ int main(void){
             Clock_Delay1ms(time2);
             LaunchPad_Output(0b001); //red LED
             Motor_Stop();
-        } else if (Position <= -237 && Position > -332) { // way off left
-            Motor_Left(0,3*speed);
+        } else if (Position <= -237 && Position > -332) { // far off to the left
+            Motor_Left(1.9*speed,2.5*speed);
             Clock_Delay1ms(time3);
             LaunchPad_Output(0b100); //blue LED
             Motor_Stop();
-        } else if (Position >= 237 && Position < 332) { // way off right
-            Motor_Right(3*speed,0);
+        } else if (Position >= 237 && Position < 332) { // far off to the right
+            Motor_Right(2.5*speed,1.9*speed);
             Clock_Delay1ms(time3);
             LaunchPad_Output(0b101); //magenta LED
             Motor_Stop();
         } else if (Data == 0b00000000 && Position == 333) { // goal
             Motor_Stop();
             LaunchPad_Output(0b010); //green LED
-            //break;
+            break;
         } else {
             Motor_Backward(backup_speed,backup_speed);
             Clock_Delay1ms(time_backup);
             Motor_Stop();
             LaunchPad_Output(0b001); //red LED
         }
+        if ()
     }
 }
 

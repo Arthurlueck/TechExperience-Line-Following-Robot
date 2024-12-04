@@ -75,9 +75,9 @@ void Motor_Init(void){
     P3 -> SEL1 &= ~0xC0;
     P3 -> DIR |= 0xC0;
 
-    P5 -> SEL0 &= ~0x30;
-    P5 -> SEL1 &= ~0x30;
-    P5 -> DIR |= 0x30;
+    P1 -> SEL0 &= ~0xC0;
+    P1 -> SEL1 &= ~0xC0;
+    P1 -> DIR |= 0xC0;
 
     PWM_Init34(15000, 0, 0);
     P3 -> OUT &= ~0xC0;
@@ -91,7 +91,7 @@ void Motor_Init(void){
 // Input: none
 // Output: none
 void Motor_Stop(void){
-  P5->OUT &= ~0x30;
+  P1->OUT &= ~0xC0;
     P2->OUT &= ~0xC0;   // off
     P3->OUT |= 0xC0;   // low current sleep mode
     PWM_Init34(15000, 0, 0);
@@ -108,7 +108,7 @@ void Motor_Stop(void){
 // Assumes: Motor_Init() has been called
 void Motor_Forward(uint16_t leftDuty, uint16_t rightDuty){
   P3 -> OUT |= 0xC0;  // nSleep = 1
-    P5 -> OUT &= ~0x30; // PH = 0
+    P1 -> OUT &= ~0xC0; // PH = 0
     PWM_Duty3(rightDuty);
     PWM_Duty4(leftDuty);
     return;
@@ -124,8 +124,8 @@ void Motor_Forward(uint16_t leftDuty, uint16_t rightDuty){
 // Assumes: Motor_Init() has been called
 void Motor_Right(uint16_t leftDuty, uint16_t rightDuty){ 
    P3 -> OUT |= 0xC0;  // nSleep = 1
-    P5 -> OUT &= ~0x10; // P5.4 PH = 0
-    P5 -> OUT |= 0x20; // P5.5 PH = 1
+    P1 -> OUT &= ~0x80; // P5.4->P1.7 PH = 0
+    P1 -> OUT |= 0xe40; // P5.5->1.6 PH = 1
     PWM_Duty4(leftDuty);
     PWM_Duty3(rightDuty);
 }
@@ -141,8 +141,8 @@ void Motor_Right(uint16_t leftDuty, uint16_t rightDuty){
 void Motor_Left(uint16_t leftDuty, uint16_t rightDuty){ 
   // write this as part of Lab 13
 P3 -> OUT |= 0xC0;  // nSleep = 1
-    P5 -> OUT |= 0x10; // P5.4 PH = 1
-    P5 -> OUT &= ~0x20; // P5.5 PH = 0
+    P1 -> OUT |= 0x80; // P5.4->P1.7 PH = 1
+    P1 -> OUT &= ~0x40; // P5.5->P1.6 PH = 0
     PWM_Duty4(leftDuty);
     PWM_Duty3(rightDuty);
 }
@@ -157,7 +157,7 @@ P3 -> OUT |= 0xC0;  // nSleep = 1
 // Assumes: Motor_Init() has been called
 void Motor_Backward(uint16_t leftDuty, uint16_t rightDuty){
   P3 -> OUT |= 0xC0;  // nSleep = 1
-    P5 -> OUT |= 0x30; // PH = 1
+    P1 -> OUT |= 0xC0; // PH = 1
     PWM_Duty3(rightDuty);
     PWM_Duty4(leftDuty);
     return;
