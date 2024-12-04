@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := E:/ti/ccs900/ccs/tools/compiler/ti-cgt-arm_18.12.1.LTS
+CG_TOOL_ROOT := C:/ti/ccs1281/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -131,16 +131,10 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-Lab13_Timers.out \
+Lab13_Timers.out 
 
 EXE_OUTPUTS__QUOTED += \
-"Lab13_Timers.out" \
-
-BIN_OUTPUTS += \
-Lab13_Timers.hex \
-
-BIN_OUTPUTS__QUOTED += \
-"Lab13_Timers.hex" \
+"Lab13_Timers.out" 
 
 
 # All Target
@@ -151,20 +145,13 @@ all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 Lab13_Timers.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: ARM Linker'
-	"E:/ti/ccs900/ccs/tools/compiler/ti-cgt-arm_18.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=all --define=__MSP432P401R__ --define=ccs -g --c99 --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab13_Timers.map" --heap_size=1024 --stack_size=512 -i"E:/ti/ccs900/ccs/ccs_base/arm/include" -i"E:/ti/ccs900/ccs/ccs_base/arm/include" -i"E:/ti/ccs900/ccs/tools/compiler/ti-cgt-arm_18.12.1.LTS/lib" -i"E:/ti/ccs900/ccs/tools/compiler/ti-cgt-arm_18.12.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab13_Timers_linkInfo.xml" --rom_model -o "Lab13_Timers.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1281/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=all --define=__MSP432P401R__ --define=ccs -g --c99 --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab13_Timers.map" --heap_size=1024 --stack_size=512 -i"C:/ti/ccs1281/ccs/ccs_base/arm/include" -i"C:/ti/ccs1281/ccs/ccs_base/arm/include" -i"C:/ti/ccs1281/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1281/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab13_Timers_linkInfo.xml" --rom_model -o "Lab13_Timers.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
-	@echo ' '
-
-Lab13_Timers.hex: $(EXE_OUTPUTS)
-	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
-	@echo 'Invoking: ARM Hex Utility'
-	"E:/ti/ccs900/ccs/tools/compiler/ti-cgt-arm_18.12.1.LTS/bin/armhex" --memwidth=8 --romwidth=8 -o "Lab13_Timers.hex" $(EXE_OUTPUTS__QUOTED)
-	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
+	-$(RM) $(EXE_OUTPUTS__QUOTED)
 	-$(RM) "Bump.obj" "Clock.obj" "CortexM.obj" "Lab13_Timersmain.obj" "LaunchPad.obj" "Motor.obj" "PWM.obj" "TExaS.obj" "TimerA1.obj" "blinker.obj" "startup_msp432p401r_ccs.obj" "system_msp432p401r.obj" 
 	-$(RM) "Bump.d" "Clock.d" "CortexM.d" "Lab13_Timersmain.d" "LaunchPad.d" "Motor.d" "PWM.d" "TExaS.d" "TimerA1.d" "blinker.d" "startup_msp432p401r_ccs.d" "system_msp432p401r.d" 
 	-@echo 'Finished clean'

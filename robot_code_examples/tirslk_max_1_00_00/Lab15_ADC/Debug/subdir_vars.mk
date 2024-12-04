@@ -12,15 +12,15 @@ OBJ_SRCS += \
 ../UART0.obj 
 
 C_SRCS += \
-E:/Dropbox/TIteachingProject/RSLK_1_1/inc/ADC14.c \
-E:/Dropbox/TIteachingProject/RSLK_1_1/inc/Clock.c \
-E:/Dropbox/TIteachingProject/RSLK_1_1/inc/CortexM.c \
-E:/Dropbox/TIteachingProject/RSLK_1_1/inc/IRDistance.c \
-E:/Dropbox/TIteachingProject/RSLK_1_1/inc/LPF.c \
+C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/ADC14.c \
+C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/Clock.c \
+C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/CortexM.c \
+C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/IRDistance.c \
+C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/LPF.c \
 ../Lab15_ADCmain.c \
-E:/Dropbox/TIteachingProject/RSLK_1_1/inc/LaunchPad.c \
-E:/Dropbox/TIteachingProject/RSLK_1_1/inc/Nokia5110.c \
-E:/Dropbox/TIteachingProject/RSLK_1_1/inc/TimerA1.c \
+C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/LaunchPad.c \
+C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/Nokia5110.c \
+C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/TimerA1.c \
 ../startup_msp432p401r_ccs.c \
 ../system_msp432p401r.c 
 
@@ -77,15 +77,15 @@ C_DEPS__QUOTED += \
 "system_msp432p401r.d" 
 
 C_SRCS__QUOTED += \
-"E:/Dropbox/TIteachingProject/RSLK_1_1/inc/ADC14.c" \
-"E:/Dropbox/TIteachingProject/RSLK_1_1/inc/Clock.c" \
-"E:/Dropbox/TIteachingProject/RSLK_1_1/inc/CortexM.c" \
-"E:/Dropbox/TIteachingProject/RSLK_1_1/inc/IRDistance.c" \
-"E:/Dropbox/TIteachingProject/RSLK_1_1/inc/LPF.c" \
+"C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/ADC14.c" \
+"C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/Clock.c" \
+"C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/CortexM.c" \
+"C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/IRDistance.c" \
+"C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/LPF.c" \
 "../Lab15_ADCmain.c" \
-"E:/Dropbox/TIteachingProject/RSLK_1_1/inc/LaunchPad.c" \
-"E:/Dropbox/TIteachingProject/RSLK_1_1/inc/Nokia5110.c" \
-"E:/Dropbox/TIteachingProject/RSLK_1_1/inc/TimerA1.c" \
+"C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/LaunchPad.c" \
+"C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/Nokia5110.c" \
+"C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/TimerA1.c" \
 "../startup_msp432p401r_ccs.c" \
 "../system_msp432p401r.c" 
 

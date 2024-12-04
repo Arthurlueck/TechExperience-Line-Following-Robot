@@ -1,3 +1,4 @@
+//This is a test to se if i can commit from inside the ide
 // LaunchPad.c
 // Runs on MSP432
 // Input from switches, output to LED

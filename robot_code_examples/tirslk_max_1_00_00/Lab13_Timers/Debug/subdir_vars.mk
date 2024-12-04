@@ -9,16 +9,16 @@ CMD_SRCS += \
 ../msp432p401r.cmd 
 
 C_SRCS += \
-E:/Dropbox/TIteachingProject/RSLK_1_1/inc/Bump.c \
-E:/Dropbox/TIteachingProject/RSLK_1_1/inc/Clock.c \
-E:/Dropbox/TIteachingProject/RSLK_1_1/inc/CortexM.c \
+C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/Bump.c \
+C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/Clock.c \
+C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/CortexM.c \
 ../Lab13_Timersmain.c \
-E:/Dropbox/TIteachingProject/RSLK_1_1/inc/LaunchPad.c \
-E:/Dropbox/TIteachingProject/RSLK_1_1/inc/Motor.c \
-E:/Dropbox/TIteachingProject/RSLK_1_1/inc/PWM.c \
-E:/Dropbox/TIteachingProject/RSLK_1_1/inc/TExaS.c \
-E:/Dropbox/TIteachingProject/RSLK_1_1/inc/TimerA1.c \
-E:/Dropbox/TIteachingProject/RSLK_1_1/inc/blinker.c \
+C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/LaunchPad.c \
+C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/Motor.c \
+C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/PWM.c \
+C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/TExaS.c \
+C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/TimerA1.c \
+C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/blinker.c \
 ../startup_msp432p401r_ccs.c \
 ../system_msp432p401r.c 
 
@@ -79,16 +79,16 @@ C_DEPS__QUOTED += \
 "system_msp432p401r.d" 
 
 C_SRCS__QUOTED += \
-"E:/Dropbox/TIteachingProject/RSLK_1_1/inc/Bump.c" \
-"E:/Dropbox/TIteachingProject/RSLK_1_1/inc/Clock.c" \
-"E:/Dropbox/TIteachingProject/RSLK_1_1/inc/CortexM.c" \
+"C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/Bump.c" \
+"C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/Clock.c" \
+"C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/CortexM.c" \
 "../Lab13_Timersmain.c" \
-"E:/Dropbox/TIteachingProject/RSLK_1_1/inc/LaunchPad.c" \
-"E:/Dropbox/TIteachingProject/RSLK_1_1/inc/Motor.c" \
-"E:/Dropbox/TIteachingProject/RSLK_1_1/inc/PWM.c" \
-"E:/Dropbox/TIteachingProject/RSLK_1_1/inc/TExaS.c" \
-"E:/Dropbox/TIteachingProject/RSLK_1_1/inc/TimerA1.c" \
-"E:/Dropbox/TIteachingProject/RSLK_1_1/inc/blinker.c" \
+"C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/LaunchPad.c" \
+"C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/Motor.c" \
+"C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/PWM.c" \
+"C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/TExaS.c" \
+"C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/TimerA1.c" \
+"C:/Users/41764/OneDrive/Dokumente/GitHub/TechExperience-Line-Following-Robot/robot_code_examples/tirslk_max_1_00_00/inc/blinker.c" \
 "../startup_msp432p401r_ccs.c" \
 "../system_msp432p401r.c" 
 
