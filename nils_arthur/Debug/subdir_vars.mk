@@ -8,6 +8,9 @@ SHELL = cmd.exe
 CMD_SRCS += \
 ../msp432p401r.cmd 
 
+OBJ_SRCS += \
+../Bump.obj 
+
 C_SRCS += \
 ../Clock.c \
 ../CortexM.c \

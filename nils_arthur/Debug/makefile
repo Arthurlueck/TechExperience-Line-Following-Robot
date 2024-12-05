@@ -10,6 +10,7 @@ GEN_OPTS__FLAG :=
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
+"../Bump.obj" \
 "./Clock.obj" \
 "./CortexM.obj" \
 "./LaunchPad.obj" \

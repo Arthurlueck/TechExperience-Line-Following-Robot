@@ -77,7 +77,7 @@ int main(void){
   SSD1306_SetCursor(0,4); SSD1306_OutString("Hit bump to start");
   WaitUntilBumperTouched();
   while(1){
-    /*Odometry_Init(0,0,NORTH);        Display(); // facing North, 90
+    Odometry_Init(0,0,NORTH);        Display(); // facing North, 90
     result = ForwardUntilY(400000);  Display(); // 0,40 cm
     result = SoftLeftUntilTh(WEST);  Display(); // 180 or -180
     result = ForwardUntilX(-400000); Display(); // -40,40 cm
@@ -86,13 +86,8 @@ int main(void){
     result = SoftLeftUntilTh(EAST);  Display(); // 0
     result = ForwardUntilX(0);       Display(); // 0,0 cm
     result = SoftLeftUntilTh(NORTH); Display(); // 90
-    //StopUntilBumperTouched();
-*/
-      while(1){
+    StopUntilBumperTouched();
 
-     HardLeft();
-
-      }
 
   }
 }

@@ -1,3 +1,4 @@
+"../Bump.obj"
 "./Clock.obj"
 "./CortexM.obj"
 "./LaunchPad.obj"
